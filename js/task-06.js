@@ -5,7 +5,7 @@ const symbolsLength = input.dataset.length;
 input.addEventListener("blur", changeBorder);
 
 function changeBorder() {
-  if (input.value.length == symbolsLength) {
+  if (input.value.trim().length == symbolsLength) {
     input.classList.add("valid");
     input.classList.remove("invalid");
   } else {
