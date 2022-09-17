@@ -5,7 +5,7 @@ const ingredientsList = document.querySelector("#ingredients");
 const htmlItems = ingredients.map((ingredient) => {
   const newItem = document.createElement("li");
   newItem.textContent = ingredient;
-  newItem.className = "item";
+  newItem.classList.add("item");
   return newItem;
 });
 

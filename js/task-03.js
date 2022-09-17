@@ -15,11 +15,17 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-const newImages = images
-  .map(
-    (item) =>
-      `<li class="gallery__item"><img class="gallery__image" src="${item.url}" alt="${item.alt}"/></li>`
-  )
-  .join("");
+// const newImages = images
+//   .map(
+//     (item) =>
+//       `<li class="gallery__item"><img class="gallery__image" src="${item.url}" alt="${item.alt}"/></li>`
+//   )
+//   .join("");
+
+const newImages = images.reduce(
+  (acc, item) =>
+    (acc += `<li class="gallery__item"><img class="gallery__image" src="${item.url}" alt="${item.alt}"/></li>`),
+  ""
+);
 
 gallery.insertAdjacentHTML("beforeend", newImages);

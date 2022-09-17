@@ -1,4 +1,3 @@
-let dimention = 30;
 const createButton = document.querySelector("[data-create]");
 const destroyButton = document.querySelector("[data-destroy]");
 const boxesArea = document.getElementById("boxes");
@@ -12,6 +11,7 @@ createButton.addEventListener("click", () => createBoxes(inputValue));
 destroyButton.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
+  let dimention = 30;
   const output = [];
 
   for (let i = 0; i < amount; i++) {
@@ -24,6 +24,7 @@ function createBoxes(amount) {
   }
 
   boxesArea.append(...output);
+  input.value = "";
 }
 
 function destroyBoxes() {
