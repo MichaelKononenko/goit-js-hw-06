@@ -5,8 +5,9 @@ const colorSpan = document.querySelector(".color");
 buttonInput.addEventListener("click", makeMagic);
 
 function makeMagic() {
-  body.style.backgroundColor = getRandomHexColor();
-  colorSpan.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  body.style.backgroundColor = randomColor;
+  colorSpan.textContent = randomColor;
 }
 
 function getRandomHexColor() {

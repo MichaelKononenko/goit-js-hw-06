@@ -2,11 +2,11 @@ const createButton = document.querySelector("[data-create]");
 const destroyButton = document.querySelector("[data-destroy]");
 const boxesArea = document.getElementById("boxes");
 const input = document.querySelector("input");
-let inputValue = 0;
 
-input.addEventListener("input", () => (inputValue = input.value));
-
-createButton.addEventListener("click", () => createBoxes(inputValue));
+createButton.addEventListener("click", () => {
+  const inputValue = input.value;
+  createBoxes(inputValue);
+});
 
 destroyButton.addEventListener("click", destroyBoxes);
 
